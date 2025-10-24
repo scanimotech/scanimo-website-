@@ -148,8 +148,8 @@ export default function WhatDefinesUs() {
               onClick={() => scrollToIndex(i)}
               className={`h-2 rounded-full transition-all duration-300 ${
                 i === currentIndex
-                  ? "w-8 bg-gray-800"
-                  : "w-2 bg-gray-300 hover:bg-gray-400"
+                  ? "w-8 bg-blue-600"
+                  : "w-2 bg-blue-300 hover:bg-blue-400"
               }`}
               aria-label={`Go to slide ${i + 1}`}
             />
@@ -165,13 +165,3 @@ export default function WhatDefinesUs() {
     </div>
   );
 }
-
-
-
-
-// className="text-justify text-base sm:text-lg md:text-[20px] 
-//             leading-relaxed mx-2 sm:mx-4 md:mx-4 my-10 sm:my-16 md:my-20
-//             lg:mx-15" para
-
-
-//             <div className="OurStory mt-10 px-6 sm:px-8 md:px-8 lg:px-6 overflow-hidden">
