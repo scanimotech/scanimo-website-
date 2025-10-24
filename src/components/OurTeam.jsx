@@ -12,7 +12,7 @@ const team = [
   name: "Varinder Sarin",
   image: "src/assets/1.jpg",
   role: "Co-founder & Strategy Head",
-  about: "Mr. Varinder Sarin serves as the Co-founder and Strategy Head at Scanimo Technologies, bringing decades of leadership and corporate experience to the team. With a strong background in business development, operations, and organizational management, he plays a crucial role in shaping the company’s long-term vision and growth roadmap. His strategic insights help bridge the gap between innovation and execution, ensuring that every idea is backed by a solid business foundation. Beyond strategy, he mentors the team to maintain clarity, focus, and excellence across all verticals.",
+  about: "Mr. Varinder Sarin serves as the Co-founder and Strategy Head at Scanimo Technologies, bringing decades of leadership and corporate experience to the team. With a strong background in business development, operations, and organizational management, he plays a crucial role in shaping the company's long-term vision and growth roadmap. His strategic insights help bridge the gap between innovation and execution, ensuring that every idea is backed by a solid business foundation. Beyond strategy, he mentors the team to maintain clarity, focus, and excellence across all verticals.",
   features: ["Business Strategy", "Corporate Leadership", "Operational Planning", "Mentorship"],
   line: "Guiding innovation with experience, insight, and vision."
 },
@@ -24,7 +24,7 @@ const team = [
   },
   { name: "Sagar Kanth", image: "src/assets/3.jpg",
     role:"Software Development Intern",
-    about:"Sagar is a skilled software developer with expertise in full-stack web development and system design. With experience in building responsive, high-performance applications, he focuses on writing clean, efficient code and delivering seamless user experiences. Passionate about emerging technologies, Sagar constantly explores new frameworks and tools to enhance the technical foundation of Scanimo’s products.",
+    about:"Sagar is a skilled software developer with expertise in full-stack web development and system design. With experience in building responsive, high-performance applications, he focuses on writing clean, efficient code and delivering seamless user experiences. Passionate about emerging technologies, Sagar constantly explores new frameworks and tools to enhance the technical foundation of Scanimo's products.",
     features:["Full-Stack Development", "API Design", "Database Management", "System Optimization"],
     line:"Building robust code that powers great experiences."
   },
@@ -150,7 +150,7 @@ export default function OurTeam() {
               </h2>
                  
               <p className="text-gray-600 text-md lg:text-lg text-center leading-8 lg:px-44">
-                We’re a team of passionate tech enthusiasts and problem-solvers,
+                We're a team of passionate tech enthusiasts and problem-solvers,
                  turning innovative ideas into meaningful real-world solutions.
                   From brainstorming sessions filled with wild concepts to late-night,
                    coffee-fueled coding marathons, we thrive on collaboration,
@@ -228,7 +228,7 @@ export default function OurTeam() {
                     className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
                       idx === activeCardIndex 
                         ? 'w-8 bg-blue-600' 
-                        : 'w-2 bg-gray-300 hover:bg-gray-400'
+                        : 'w-2 bg-blue-300 hover:bg-blue-400'
                     }`}
                   />
                 ))}
