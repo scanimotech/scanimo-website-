@@ -2,7 +2,7 @@ import { useState } from "react";
 import ScrollingImage from "./components/ScrollingImage";
 import logo from "./assets/logo.png";
 import OurTeam from "./components/OurTeam";
-import Vedio from "./components/Vedio.jsx";
+import Vedio from "./components/vedio.jsx";
 import ContactUs from "./components/Contact_us";
 import JoinUs from "./components/AnimatedWorldMap";
 import Footer from "./components/Footer.jsx";
@@ -147,7 +147,7 @@ export default function App() {
       
 
     <section className="relative w-full pt-10">
-       < Vedio />
+       < vedio />
     </section>
     <div id="contact" className="w-full mt-auto  ">
         <ContactUs />
