@@ -12,7 +12,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
       {/* <Footer1 /> */}
       <App />  
-      {/* <Vedio /> */}
     {/* <OurTeam /> */}
     {/* <Contact_us /> */}
     
