@@ -167,19 +167,32 @@ export default function OurTeam() {
             <div className="lg:hidden">
               <div 
                 className="overflow-x-auto scrollbar-hide bg-transparent"
-                onScroll={(e) => {
-                  const scrollLeft = e.target.scrollLeft;
-                  let cardWidth;
-                  if (window.innerWidth < 370) {
-                    cardWidth = 224 + 16;
-                  } else if (window.innerWidth < 460) {
-                    cardWidth = 256 + 16;
-                  } else {
-                    cardWidth = 320 + 16;
-                  }
-                  const index = Math.round(scrollLeft / cardWidth);
-                  setActiveCardIndex(index);
-                }}
+                // Replace the onScroll handler in the mobile view with this:
+
+onScroll={(e) => {
+  const container = e.target;
+  const scrollLeft = container.scrollLeft;
+  const containerWidth = container.offsetWidth;
+  
+  // Calculate which card is most centered in the viewport
+  const center = scrollLeft + containerWidth / 2;
+  let closestIndex = 0;
+  let closestDistance = Infinity;
+  
+  const cards = container.children[0].children; // Get the card elements
+  for (let i = 0; i < cards.length; i++) {
+    const card = cards[i];
+    const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+    const distance = Math.abs(center - cardCenter);
+    
+    if (distance < closestDistance) {
+      closestDistance = distance;
+      closestIndex = i;
+    }
+  }
+  
+  setActiveCardIndex(closestIndex);
+}}
               >
                 <div className="flex gap-4 px-4 snap-x snap-mandatory bg-transparent">
                   {teamMembers.map((member, idx) => (
@@ -212,22 +225,28 @@ export default function OurTeam() {
                 {teamMembers.map((_, idx) => (
                   <button
                     key={idx}
-                    onClick={() => {
-                      const container = document.querySelector('.overflow-x-auto');
-                      let cardWidth;
-                      if (window.innerWidth < 370) {
-                        cardWidth = 224 + 16;
-                      } else if (window.innerWidth < 460) {
-                        cardWidth = 256 + 16;
-                      } else {
-                        cardWidth = 320 + 16;
-                      }
-                      container.scrollTo({
-                        left: idx * cardWidth,
-                        behavior: 'smooth'
-                      });
-                      setActiveCardIndex(idx);
-                    }}
+                    // Also update the dot button click handler to be more accurate:
+
+onClick={() => {
+  const container = document.querySelector('.overflow-x-auto');
+  const cards = container.children[0].children;
+  const targetCard = cards[idx];
+  
+  if (targetCard) {
+    const containerWidth = container.offsetWidth;
+    const cardLeft = targetCard.offsetLeft;
+    const cardWidth = targetCard.offsetWidth;
+    
+    // Center the card in the viewport
+    const scrollPosition = cardLeft - (containerWidth - cardWidth) / 2;
+    
+    container.scrollTo({
+      left: scrollPosition,
+      behavior: 'smooth'
+    });
+  }
+  setActiveCardIndex(idx);
+}}
                     className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
                       idx === activeCardIndex 
                         ? 'w-8 bg-blue-600' 
