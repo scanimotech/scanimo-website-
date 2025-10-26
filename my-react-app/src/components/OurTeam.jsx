@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import i1 from "../assets/1.jpg";
 import i2 from "../assets/2.jpg";
@@ -37,6 +37,8 @@ export default function OurTeam() {
   const [expanded, setExpanded] = useState(null);
   const [hoveredCard, setHoveredCard] = useState(null);
   const [activeCardIndex, setActiveCardIndex] = useState(0);
+  const scrollContainerRef = useRef(null);
+
 
   const teamMembers = [
     {
@@ -165,35 +167,37 @@ export default function OurTeam() {
             </div>
             
             <div className="lg:hidden">
-              <div 
-                className="overflow-x-auto scrollbar-hide bg-transparent"
-                // Replace the onScroll handler in the mobile view with this:
-
-onScroll={(e) => {
-  const container = e.target;
-  const scrollLeft = container.scrollLeft;
-  const containerWidth = container.offsetWidth;
-  
-  // Calculate which card is most centered in the viewport
-  const center = scrollLeft + containerWidth / 2;
-  let closestIndex = 0;
-  let closestDistance = Infinity;
-  
-  const cards = container.children[0].children; // Get the card elements
-  for (let i = 0; i < cards.length; i++) {
-    const card = cards[i];
-    const cardCenter = card.offsetLeft + card.offsetWidth / 2;
-    const distance = Math.abs(center - cardCenter);
+             
+<div 
+  ref={scrollContainerRef}
+  className="overflow-x-auto scrollbar-hide bg-transparent"
+  onScroll={(e) => {
+    const container = e.target;
+    const scrollLeft = container.scrollLeft;
+    const containerWidth = container.offsetWidth;
     
-    if (distance < closestDistance) {
-      closestDistance = distance;
-      closestIndex = i;
+    // Calculate which card is most centered in the viewport
+    const center = scrollLeft + containerWidth / 2;
+    let closestIndex = 0;
+    let closestDistance = Infinity;
+    
+    const cards = container.children[0].children;
+    for (let i = 0; i < cards.length; i++) {
+      const card = cards[i];
+      const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+      const distance = Math.abs(center - cardCenter);
+      
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closestIndex = i;
+      }
     }
-  }
-  
-  setActiveCardIndex(closestIndex);
-}}
-              >
+    
+    setActiveCardIndex(closestIndex);
+  }}
+>
+
+      
                 <div className="flex gap-4 px-4 snap-x snap-mandatory bg-transparent">
                   {teamMembers.map((member, idx) => (
                     <div
@@ -228,7 +232,9 @@ onScroll={(e) => {
                     // Also update the dot button click handler to be more accurate:
 
 onClick={() => {
-  const container = document.querySelector('.overflow-x-auto');
+  const container = scrollContainerRef.current;
+  if (!container) return;
+  
   const cards = container.children[0].children;
   const targetCard = cards[idx];
   
