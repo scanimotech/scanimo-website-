@@ -16,7 +16,7 @@ export default function ftr() {
           </h2>
         </div>
             <div className="d111 h-auto md:h-1/2 lg:h-7/12 flex flex-row flex-wrap md:flex-col justify-center  md:justify-around gap-x-6 gap-y-1.5 sm:gap-y-1.5 xl:gap-0.5 md:gap-0 font-normal text-sm sm:text-base md:text-lg">
-   <a href='#about' className="relative group overflow-hidden inline-block w-fit"> 
+   <a href='#' className="relative group overflow-hidden inline-block w-fit"> 
      <span>About Us</span>
      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full"></span>
    </a> 
@@ -24,7 +24,7 @@ export default function ftr() {
      <span>Careers</span>
      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full"></span>
    </a> 
-   <a href='#contact' className="relative group overflow-hidden inline-block w-fit"> 
+   <a href='#' className="relative group overflow-hidden inline-block w-fit"> 
      <span>Contact Us</span>
      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full"></span>
    </a> 
@@ -74,7 +74,6 @@ export default function ftr() {
             <h2 className="text-sm sm:text-base md:text-lg">Shopping Reimagined</h2>
           </div>
         </div>
-
 
         {/* Section 2 */}
         <div className="section-col">
