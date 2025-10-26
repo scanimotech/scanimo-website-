@@ -73,15 +73,17 @@ export default function App() {
   <div  className="max-w-8xl mx-auto px-4 sm:pt-20 sm:px-10 lg:px-20">
 
     {/* Heading */}
-    <h2  
-      className="font-poppins font-bold 
-        bg-[linear-gradient(90deg,#148CFF_0%,#148CFF_20%,#005BBB_60%)] 
-        bg-clip-text text-transparent leading-tight text-center 
-        text-[1.85rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] 
-        xl:text-[3.5rem] transition-all duration-300"
-    >
-      The Future of Shopping in India is Almost Here Fast, Smart, and Effortless
-    </h2>
+   <h2  
+  className="font-poppins font-bold 
+    bg-[linear-gradient(90deg,#148CFF_0%,#148CFF_20%,#005BBB_60%)] 
+    bg-clip-text text-transparent leading-tight text-center 
+    text-[1.85rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] 
+    xl:text-[3.5rem] transition-all duration-300"
+>
+  The Future of Shopping in India is Almost Here{" "}
+  <br className="hidden sm:block" />
+  Fast, Smart, and Effortless
+</h2>
 
     {/* Subheading */}
     <p className="text-[0.875rem] sm:text-[1.rem] md:text-[1rem] lg:text-[1.2rem] xl:text-[1.2rem] font-poppins
