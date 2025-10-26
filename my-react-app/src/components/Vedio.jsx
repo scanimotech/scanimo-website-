@@ -66,7 +66,7 @@ const ScrollAnimatedVideo = () => {
     >
       {/* Heading */}
       
-      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-gray-800 leading-none">
+      <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-semibold mx-auto mt-4">
   
         <span
         style={{
@@ -78,7 +78,10 @@ const ScrollAnimatedVideo = () => {
   >
     Scanimo's
   </span>{' '}
-  Vision in Motion
+  Vision in Motion<div className="h-[4px] w-full rounded-full" style={{
+                          background: "linear-gradient(to right,#148CFF 0%, #148CFF 80%,  #FF8F00 80%, #FF8F00 100% )",
+                                    }}
+              ></div>
 </h2>
 
       {/* Video container */}
@@ -130,4 +133,3 @@ const ScrollAnimatedVideo = () => {
   );
 };
 export default ScrollAnimatedVideo;
-
