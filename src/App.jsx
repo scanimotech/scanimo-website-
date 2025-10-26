@@ -1,9 +1,9 @@
 import { useState } from "react";
 import ScrollingImage from "./components/ScrollingImage";
 import logo from "./assets/logo.png";
-import OurTeam from "./components/OurTeam";
+import OurTeam from "./components/OurTeam.jsx";
 import Vedio from "./components/vedio.jsx";
-import ContactUs from "./components/Contact_us";
+import ContactUs from "./components/Contact_us.jsx";
 import JoinUs from "./components/AnimatedWorldMap";
 import Footer from "./components/Footer.jsx";
 import AboutUs from "./components/AboutUs.jsx";
