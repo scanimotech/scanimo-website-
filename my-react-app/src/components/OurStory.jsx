@@ -25,7 +25,7 @@ export default function OurStory() {
             
       </div>
           <p
-            className="text-justify font-semibold text-base sm:text-lg md:text-[20px] 
+            className="text-justify text-base sm:text-lg md:text-[20px] 
             leading-relaxed mx-2 sm:mx-4 md:mx-4 my-10 sm:my-16 md:my-20
             lg:mx-15"
             
@@ -76,4 +76,5 @@ export default function OurStory() {
     </>
   );
 }
+
 
