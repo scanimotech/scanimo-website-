@@ -2,56 +2,56 @@ import React, { useState } from "react";
 import { Mail, Phone } from "lucide-react";
 import image from "../assets/Contactus.svg";
 
-const ContactUs = () => {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    message: "",
-  });
-  const [response, setResponse] = useState({ message: "", type: "" }); // type: 'success' or 'error'
-  const [isSubmitting, setIsSubmitting] = useState(false);
+// const ContactUs = () => {
+//   const [formData, setFormData] = useState({
+//     firstName: "",
+//     lastName: "",
+//     email: "",
+//     message: "",
+//   });
+//   const [response, setResponse] = useState({ message: "", type: "" }); // type: 'success' or 'error'
+//   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+//   const handleChange = (e) => {
+//     setFormData({
+//       ...formData,
+//       [e.target.name]: e.target.value,
+//     });
+//   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setResponse({ message: "", type: "" });
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+//     setIsSubmitting(true);
+//     setResponse({ message: "", type: "" });
 
-    try {
-      const res = await fetch("http://localhost:5000/submit-form", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+//     try {
+//       const res = await fetch("http://localhost:5000/submit-form", {
+//         method: "POST",
+//         headers: { "Content-Type": "application/json" },
+//         body: JSON.stringify(formData),
+//       });
 
-      const data = await res.json();
+//       const data = await res.json();
 
-      if (data.success) {
-        setResponse({ message: data.message, type: "success" });
-        // Reset form after success
-        setFormData({ firstName: "", lastName: "", email: "", message: "" });
-        // Clear checkbox
-        document.getElementById("privacy").checked = false;
-      } else {
-        setResponse({ message: data.message, type: "error" });
-      }
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      setResponse({
-        message: "Unable to connect to server. Please try again!",
-        type: "error",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+//       if (data.success) {
+//         setResponse({ message: data.message, type: "success" });
+//         // Reset form after success
+//         setFormData({ firstName: "", lastName: "", email: "", message: "" });
+//         // Clear checkbox
+//         document.getElementById("privacy").checked = false;
+//       } else {
+//         setResponse({ message: data.message, type: "error" });
+//       }
+//     } catch (error) {
+//       console.error("Error submitting form:", error);
+//       setResponse({
+//         message: "Unable to connect to server. Please try again!",
+//         type: "error",
+//       });
+//     } finally {
+//       setIsSubmitting(false);
+//     }
+//   };
 
   return (
     <section className="min-h-screen bg-gray-50 flex items-center justify-center p-6 xl:px-6 lg:px-8 md:px-4 sm:px-6">
