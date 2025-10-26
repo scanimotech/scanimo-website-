@@ -69,24 +69,26 @@ export default function App() {
   )}
 </header>
 
-    <main  className="flex flex-col bg-white justify-center flex-1 mt-34">
-  <div  className="max-w-8xl mx-auto px-4 sm:pt-20 sm:px-10 lg:px-20">
+    <main className="flex flex-col bg-white justify-center flex-1 mt-34">
+  <div className="max-w-8xl mx-auto px-4 sm:pt-20 sm:px-10 lg:px-20">
 
-    {/* Heading */}
-   <h2  
-  className="font-poppins font-bold 
-    bg-[linear-gradient(90deg,#148CFF_0%,#148CFF_20%,#005BBB_60%)] 
-    bg-clip-text text-transparent leading-tight text-center 
-    text-[1.85rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] 
-    xl:text-[3.5rem] transition-all duration-300"
->
-  <span className="sm:block">
-    The Future of Shopping in India is Almost Here
-  </span>{" "}
-  <span className="sm:block">
-    Fast, Smart, and Effortless
-  </span>
-</h2>
+    {/* Heading with Fixed Height Container */}
+    <div className="min-h-[7rem] sm:min-h-[6rem] md:min-h-[7rem] lg:min-h-[8rem] xl:min-h-[9rem] flex items-center justify-center">
+      <h2  
+        className="font-poppins font-bold 
+          bg-[linear-gradient(90deg,#148CFF_0%,#148CFF_20%,#005BBB_60%)] 
+          bg-clip-text text-transparent leading-tight text-center 
+          text-[1.85rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] 
+          xl:text-[3.5rem] transition-all duration-300"
+      >
+        <span className="sm:block">
+          The Future of Shopping in India is Almost Here
+        </span>{" "}
+        <span className="sm:block">
+          Fast, Smart, and Effortless
+        </span>
+      </h2>
+    </div>
 
     {/* Subheading */}
     <p className="text-[0.875rem] sm:text-[1.rem] md:text-[1rem] lg:text-[1.2rem] xl:text-[1.2rem] font-poppins
@@ -95,7 +97,7 @@ export default function App() {
     </p>
 
     {/* Input + Button */}
-    <div  className="pt-4 sm:py-4  flex flex-col sm:flex-row items-center justify-center gap-3 px-2 sm:px-4">
+    <div className="pt-4 sm:py-4 flex flex-col sm:flex-row items-center justify-center gap-3 px-2 sm:px-4">
       <input
         type="text"
         placeholder="Enter your email..."
@@ -113,7 +115,6 @@ export default function App() {
       >
         Get Notified
       </button>
-      
     </div>
   </div>
 </main>
