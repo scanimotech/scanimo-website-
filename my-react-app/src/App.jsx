@@ -80,9 +80,12 @@ export default function App() {
     text-[1.85rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] 
     xl:text-[3.5rem] transition-all duration-300"
 >
-  The Future of Shopping in India is Almost Here{" "}
-  <br className="hidden sm:block" />
-  Fast, Smart, and Effortless
+  <span className="sm:block">
+    The Future of Shopping in India is Almost Here
+  </span>{" "}
+  <span className="sm:block">
+    Fast, Smart, and Effortless
+  </span>
 </h2>
 
     {/* Subheading */}
