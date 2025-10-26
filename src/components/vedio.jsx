@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import vedio from "../assets/vedio.mp4";
 
-const ScrollAnimatedvideo = () => {
+const ScrollAnimatedVideo = () => {
   const videoRef = useRef(null);
   const [visible, setVisible] = useState(false);
   const [hasPlayed, setHasPlayed] = useState(false);
@@ -129,4 +129,4 @@ const ScrollAnimatedvideo = () => {
     </section>
   );
 };
-export default ScrollAnimatedvideo;
+export default ScrollAnimatedVideo;
