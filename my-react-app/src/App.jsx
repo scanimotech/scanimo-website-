@@ -68,7 +68,7 @@ export default function App() {
     </div>
   )}
 </header>
-<main  className="flex flex-col bg-white justify-center flex-1 mt-32">
+<main  className="flex flex-col bg-white justify-center flex-1 mt-40">
   <div  className="max-w-8xl mx-auto px-4 sm:pt-20 sm:px-10 lg:px-20">
 
     {/* Heading */}
