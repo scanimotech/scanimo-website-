@@ -118,7 +118,7 @@ export default function App() {
 
       {/* Other Components */}
       
-      <div  className="w-full mt-26 sm:mt-36 md:mt-30 lg:mt-10 xl:mt-20 relative bottom-0 
+      <div  className="w-full mt-26 sm:mt-36 md:mt-30 lg:mt-10 xl:mt-24 relative bottom-0 
       object-contain ">
         <ScrollingImage />
       </div>
