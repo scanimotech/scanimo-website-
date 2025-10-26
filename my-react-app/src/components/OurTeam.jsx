@@ -8,29 +8,32 @@ const team = [
     features:["AI/ML Integration","Product Strategy","Team Leadership","UI/UX Design"],
     line:"Fueled by coffee, curiosity, and a never-ending to-do list"
   },
-  { name: "Varinder Sarin", image: "src/assets/1.jpg",
-    role:"Co-founder & Strategy Head",
-    about:"Mr. Varinder Sarin provides strategic support and mentorship to Scanimo. With decades of corporate leadership experience, he helps guide business planning and operational direction in an advisory capacity.",
-    features:["Business Strategy","Team Leadership","Product Strategy"],
-    line:"Fueled by coffee, curiosity, and a never-ending to-do list"
+  {
+  name: "Varinder Sarin",
+  image: "src/assets/1.jpg",
+  role: "Co-founder & Strategy Head",
+  about: "Mr. Varinder Sarin serves as the Co-founder and Strategy Head at Scanimo Technologies, bringing decades of leadership and corporate experience to the team. With a strong background in business development, operations, and organizational management, he plays a crucial role in shaping the company's long-term vision and growth roadmap. His strategic insights help bridge the gap between innovation and execution, ensuring that every idea is backed by a solid business foundation. Beyond strategy, he mentors the team to maintain clarity, focus, and excellence across all verticals.",
+  features: ["Business Strategy", "Corporate Leadership", "Operational Planning", "Mentorship"],
+  line: "Guiding innovation with experience, insight, and vision."
+},
+  { name: "Jagmeet Singh", image: "src/assets/4.png",
+    role:"Product Delivery Intern",
+    about:"Jagmeet is an organized and forward-thinking Product Delivery Lead who ensures that every project at Scanimo meets its deadlines without compromising quality. With a deep understanding of product lifecycles, agile workflows, and cross-functional collaboration,he bridges the gap between strategy and execution. His leadership keeps the team aligned, efficient, and focused on delivering impactful solutions.",
+    features:["Project Management", "Agile Workflow", "Product Roadmapping", "Cross-Team Coordination"],
+    line:"Delivering innovation — on time, every time."
   },
-  { name: "Mike Rodriguez", image: "src/assets/3.jpg",
-    role:"Tech Lead",
-    about:"Namyaa is a final-year B.Tech student specializing in AI/ML, founder of Scanimo Technologies. Expert in building scalable systems and leading engineering teams.",
-    features:["System Architecture","Team Leadership","Full Stack Development"],
-    line:"Fueled by coffee, curiosity, and a never-ending to-do list"
-  },
-  { name: "Emily Davis", image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?fm=jpg&q=60&w=3000",
-    role:"Marketing Director",
-    about:"Namyaa is a final-year B.Tech student specializing in AI/ML, founder of Scanimo Technologies. Creative strategist driving brand growth and customer engagement.",
-    features:["Digital Marketing","Brand Strategy","Growth Hacking"],
-    line:"Fueled by coffee, curiosity, and a never-ending to-do list"
+  { name: "Sagar Kanth", image: "src/assets/3.jpg",
+    role:"Software Development Intern",
+    about:"Sagar is a skilled software developer with expertise in full-stack web development and system design. With experience in building responsive, high-performance applications, he focuses on writing clean, efficient code and delivering seamless user experiences. Passionate about emerging technologies, Sagar constantly explores new frameworks and tools to enhance the technical foundation of Scanimo's products.",
+    features:["Full-Stack Development", "API Design", "Database Management", "System Optimization"],
+    line:"Building robust code that powers great experiences."
   },
 ];
 
 export default function OurTeam() {
   const [expanded, setExpanded] = useState(null);
   const [hoveredCard, setHoveredCard] = useState(null);
+  const [activeCardIndex, setActiveCardIndex] = useState(0);
 
   const teamMembers = [
     {
@@ -38,33 +41,29 @@ export default function OurTeam() {
       name: 'Namya Sarin',
       role: 'Founder and Product Head',
       image: "src/assets/2.jpg",
-      color: 'from-pink-500/80 to-rose-600/80'
     },
     {
       id: 2,
       name: 'Varinder Sarin',
       role: 'Co-founder & Strategy Head',
       image: "src/assets/1.jpg",
-      color: 'from-purple-500/80 to-indigo-600/80'
     },
     {
       id: 3,
-      name: 'Mike Rodriguez',
-      role: 'Tech Lead',
-      image: 'src/assets/3.jpg',
-      color: 'from-blue-500/80 to-cyan-600/80'
+      name: 'Jagmeet Singh',
+      role: 'Product Delivery Intern',
+      image: 'src/assets/4.png',
     },
     {
       id: 4,
-      name: 'Emily Davis',
-      role: 'Marketing Director',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=600&fit=crop',
-      color: 'from-emerald-500/80 to-teal-600/80'
+      name: 'Sagar Kanth',
+      role: 'Software Development Intern',
+      image: 'src/assets/3.jpg',
     }
   ];
 
   return (
-    <div className="h-auto min-h-screen px-4 md:px-8 lg:px-16 xl:px-24">
+    <div className="h-auto min-h-screen px-4 md:px-8 lg:px-16 xl:px-24 bg-white">
       {expanded !== null ? (
         <div className="flex flex-col justify-start lg:justify-end h-auto lg:h-screen w-full max-w-[1600px] mx-auto">
           <div className="flex justify-center mb-2">
@@ -115,7 +114,7 @@ export default function OurTeam() {
                   {team[expanded].about}
                 </p>
 
-                <div className="flex flex-wrap justify-start gap-2 md:gap-4 my-5">
+                <div className="flex flex-wrap justify-start gap-2 md:gap-4 my-8">
                   {team[expanded].features.map((feature, i) => (
                     <div key={i} className="border-2 border-orange-500 rounded-xl px-3 py-1 text-sm md:text-base hover:bg-orange-500 hover:text-white transition-colors">
                       {feature}
@@ -128,10 +127,10 @@ export default function OurTeam() {
           </motion.div>
         </div>
       ) : (
-        <div className="min-h-screen flex items-center justify-center p-4 md:p-8">
+        <div className="min-h-screen flex justify-center p-4 md:p-8">
           <div className="max-w-[1400px] w-full mx-auto">
-            <div className="w-full flex flex-col items-center mb-14 gap-14">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-grey-800 leading-none text-center">
+            <div className="w-full flex flex-col mb-14 gap-14">
+              <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-semibold mx-auto mt-4">
                 Meet{" "}
                 <span
                   style={{
@@ -144,45 +143,99 @@ export default function OurTeam() {
                   Scanimo's
                 </span>{" "}
                 Team
+                <div className="h-[4px] w-full rounded-full" style={{
+                          background: "linear-gradient(to right,#148CFF 0%, #148CFF 60% ,  #FF8F00 60%, #FF8F00 80% ,#148CFF 80%, #148CFF 100%)",
+                                    }}
+              ></div>
               </h2>
-
-              <p className="text-gray-600 text-md lg:text-lg text-center leading-relaxed lg:px-44">
+                 
+              <p className="text-gray-600 text-md lg:text-lg text-center leading-8 lg:px-44">
                 We're a team of passionate tech enthusiasts and problem-solvers,
-                turning ideas into real solutions. From brainstorming sessions to
-                coffee-fueled coding, we thrive on collaboration, creativity, and
-                curiosity.
+                 turning innovative ideas into meaningful real-world solutions.
+                  From brainstorming sessions filled with wild concepts to late-night,
+                   coffee-fueled coding marathons, we thrive on collaboration,
+                    creativity, and curiosity. Every project we take on is a chance
+                     to learn, grow, and push the boundaries of what technology can
+                      achieve. Together, we build not just products, but experiences
+                     that make a difference.
               </p>
             </div>
             
-            <div className="md:hidden overflow-x-auto scrollbar-hide">
-              <div className="flex gap-4 px-4 snap-x snap-mandatory">
-                {teamMembers.map((member, idx) => (
-                  <div
-                    key={member.id}
-                    onClick={() => setExpanded(idx)}
-                    className="flex-shrink-0 w-80 h-96 rounded-2xl shadow-2xl overflow-hidden relative snap-center cursor-pointer"
-                  >
-                    <div 
-                      className="absolute inset-0 bg-cover bg-center"
-                      style={{ backgroundImage: `url(${member.image})` }}
-                    />
-                    
-                    <div className="absolute inset-0" />
-                    
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <h3 className="text-2xl font-bold text-white mb-1 drop-shadow-lg">
-                        {member.name}
-                      </h3>
-                      <p className="text-white/90 font-medium drop-shadow-lg">
-                        {member.role}
-                      </p>
+            <div className="lg:hidden">
+              <div 
+                className="overflow-x-auto scrollbar-hide bg-transparent"
+                onScroll={(e) => {
+                  const scrollLeft = e.target.scrollLeft;
+                  let cardWidth;
+                  if (window.innerWidth < 370) {
+                    cardWidth = 224 + 16;
+                  } else if (window.innerWidth < 460) {
+                    cardWidth = 256 + 16;
+                  } else {
+                    cardWidth = 320 + 16;
+                  }
+                  const index = Math.round(scrollLeft / cardWidth);
+                  setActiveCardIndex(index);
+                }}
+              >
+                <div className="flex gap-4 px-4 snap-x snap-mandatory bg-transparent">
+                  {teamMembers.map((member, idx) => (
+                    <div
+                      key={member.id}
+                      onClick={() => setExpanded(idx)}
+                      className="flex-shrink-0 w-56 h-64 min-[370px]:w-64 min-[370px]:h-72 min-[460px]:w-80 min-[460px]:h-96 rounded-2xl overflow-hidden relative snap-center cursor-pointer"
+                    >
+                      <div 
+                        className="absolute inset-0 bg-cover bg-center"
+                        style={{ backgroundImage: `url(${member.image})` }}
+                      />
+                      
+                      <div className="absolute inset-0" />
+                      
+                      <div className="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 className="text-2xl font-bold text-white mb-1 drop-shadow-lg">
+                          {member.name}
+                        </h3>
+                        <p className="text-white/90 font-medium drop-shadow-lg">
+                          {member.role}
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                  ))}
+                </div>
+              </div>
+              
+              <div className="flex justify-center gap-2 mt-6">
+                {teamMembers.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => {
+                      const container = document.querySelector('.overflow-x-auto');
+                      let cardWidth;
+                      if (window.innerWidth < 370) {
+                        cardWidth = 224 + 16;
+                      } else if (window.innerWidth < 460) {
+                        cardWidth = 256 + 16;
+                      } else {
+                        cardWidth = 320 + 16;
+                      }
+                      container.scrollTo({
+                        left: idx * cardWidth,
+                        behavior: 'smooth'
+                      });
+                      setActiveCardIndex(idx);
+                    }}
+                    className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
+                      idx === activeCardIndex 
+                        ? 'w-8 bg-blue-600' 
+                        : 'w-2 bg-blue-300 hover:bg-blue-400'
+                    }`}
+                  />
                 ))}
               </div>
             </div>
 
-            <div className="hidden md:flex gap-6 lg:gap-8 justify-center items-stretch">
+            <div className="hidden lg:flex gap-6 lg:gap-8 justify-center items-stretch">
               {teamMembers.map((member, index) => (
                 <div
                   key={member.id}
@@ -194,8 +247,8 @@ export default function OurTeam() {
                     transition-all duration-500 ease-in-out cursor-pointer
                     relative group
                     ${(index === 0 && hoveredCard === null) || hoveredCard === member.id 
-                      ? 'w-72 h-90' 
-                      : 'w-40 h-90'}
+                      ? 'w-72 h-80' 
+                      : 'w-40 h-80'}
                     ${hoveredCard && hoveredCard !== member.id ? 'opacity-70' : 'opacity-100'}
                   `}
                 >
