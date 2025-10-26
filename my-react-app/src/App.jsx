@@ -140,7 +140,7 @@ export default function App() {
       </div>
 
       
-      <div id="team" className="w-full mt-auto pt-20">
+      <div id="team" className="w-full mt-auto pt-10">
         <OurTeam />
       </div>
       
