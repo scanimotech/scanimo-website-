@@ -19,7 +19,7 @@ export default function AboutUs() {
         </div>
 
         {/* Description */}
-        <div className="text-base text-center sm:text-lg md:text-xl lg:text-3xl font-semibold bg-gradient-to-r from-[#148CFF] via-[#0568CD] to-[#004E98] bg-clip-text text-transparent leading-relaxed px-3 sm:px-3 md:px-2">
+        <div className="text-base text-center sm:text-lg md:text-xl lg:text-3xl font-bold bg-gradient-to-r from-[#148CFF] via-[#0568CD] to-[#004E98] bg-clip-text text-transparent leading-relaxed px-3 sm:px-3 md:px-2">
           Scanimo Technologies Private Limited, incorporated on January 1, 2025, is a tech-driven startup focused on transforming the retail experience. Headquartered in Jammu, Scanimo empowers both retailers and customers with smart self-scanning solutions that save time, enhance convenience, and make shopping seamless. Founded by Namyaa Sarin and Varinder Sarin, our company combines innovation, technology, and customer-centric design to redefine the future of retail.
         </div>
 
@@ -41,3 +41,4 @@ export default function AboutUs() {
     </div>
   );
 }
+
