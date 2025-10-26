@@ -95,7 +95,7 @@
   justify-content: center;
   text-align: center;
   pointer-events: none;
-  mix-blend-mode: difference;
+  mix-blend-mode:difference;
   z-index: 10;
 }
 
