@@ -147,7 +147,7 @@ export default function App() {
       
 
     <section className="relative w-full pt-10">
-       < vedio />
+       <Vedio />
     </section>
     <div id="contact" className="w-full mt-auto  ">
         <ContactUs />
