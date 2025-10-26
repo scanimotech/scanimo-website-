@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-
+import i1 from "../assets/1.jpg";
+import i2 from "../assets/2.jpg";
+import i3 from "../assets/3.jpg";
+import i4 from "../assets/4.png";
 const team = [
-  { name: "Namya Sarin", image: "src/assets/2.jpg",
+  { name: "Namya Sarin", image: i2,
     role:"Founder and Product Head",
     about:"Namyaa is a final-year B.Tech student specializing in Artificial Intelligence and Machine Learning, and the founder of Scanimo Technologies. With over 1.5 years of hands-on experience in UI/UX design, product strategy, and startup development, she brings a balance of creativity and execution to every project. Passionate about building intuitive digital experiences, she leads Scanimo's vision with clarity, innovation, and drive.",
     features:["AI/ML Integration","Product Strategy","Team Leadership","UI/UX Design"],
@@ -10,19 +13,19 @@ const team = [
   },
   {
   name: "Varinder Sarin",
-  image: "src/assets/1.jpg",
+  image: i1,
   role: "Co-founder & Strategy Head",
   about: "Mr. Varinder Sarin serves as the Co-founder and Strategy Head at Scanimo Technologies, bringing decades of leadership and corporate experience to the team. With a strong background in business development, operations, and organizational management, he plays a crucial role in shaping the company's long-term vision and growth roadmap. His strategic insights help bridge the gap between innovation and execution, ensuring that every idea is backed by a solid business foundation. Beyond strategy, he mentors the team to maintain clarity, focus, and excellence across all verticals.",
   features: ["Business Strategy", "Corporate Leadership", "Operational Planning", "Mentorship"],
   line: "Guiding innovation with experience, insight, and vision."
 },
-  { name: "Jagmeet Singh", image: "src/assets/4.png",
+  { name: "Jagmeet Singh", image: i4,
     role:"Product Delivery Intern",
     about:"Jagmeet is an organized and forward-thinking Product Delivery Lead who ensures that every project at Scanimo meets its deadlines without compromising quality. With a deep understanding of product lifecycles, agile workflows, and cross-functional collaboration,he bridges the gap between strategy and execution. His leadership keeps the team aligned, efficient, and focused on delivering impactful solutions.",
     features:["Project Management", "Agile Workflow", "Product Roadmapping", "Cross-Team Coordination"],
     line:"Delivering innovation — on time, every time."
   },
-  { name: "Sagar Kanth", image: "src/assets/3.jpg",
+  { name: "Sagar Kanth", image: i3,
     role:"Software Development Intern",
     about:"Sagar is a skilled software developer with expertise in full-stack web development and system design. With experience in building responsive, high-performance applications, he focuses on writing clean, efficient code and delivering seamless user experiences. Passionate about emerging technologies, Sagar constantly explores new frameworks and tools to enhance the technical foundation of Scanimo's products.",
     features:["Full-Stack Development", "API Design", "Database Management", "System Optimization"],
@@ -40,25 +43,25 @@ export default function OurTeam() {
       id: 1,
       name: 'Namya Sarin',
       role: 'Founder and Product Head',
-      image: "src/assets/2.jpg",
+      image: i2,
     },
     {
       id: 2,
       name: 'Varinder Sarin',
       role: 'Co-founder & Strategy Head',
-      image: "src/assets/1.jpg",
+      image: i1,
     },
     {
       id: 3,
       name: 'Jagmeet Singh',
       role: 'Product Delivery Intern',
-      image: 'src/assets/4.png',
+      image: i4,
     },
     {
       id: 4,
       name: 'Sagar Kanth',
       role: 'Software Development Intern',
-      image: 'src/assets/3.jpg',
+      image: i3,
     }
   ];
 
