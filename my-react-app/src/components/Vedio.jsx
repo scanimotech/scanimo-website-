@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import vedio from "../assets/vedio.mp4";
+import vedio from "../assets/Vedio.mp4";
 
 const ScrollAnimatedVideo = () => {
   const videoRef = useRef(null);
@@ -130,3 +130,4 @@ const ScrollAnimatedVideo = () => {
   );
 };
 export default ScrollAnimatedVideo;
+
