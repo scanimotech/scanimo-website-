@@ -140,13 +140,13 @@ export default function App() {
       </div>
 
       
-      <div id="team" className="w-full mt-auto pt-10">
+      <div id="team" className="w-full mt-auto">
         <OurTeam />
       </div>
       
       
 
-    <section className="relative w-full pt-10">
+    <section className="relative w-full">
        < Vedio />
     </section>
     <div id="contact" className="w-full mt-auto  ">
