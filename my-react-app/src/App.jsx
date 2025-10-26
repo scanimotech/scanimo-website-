@@ -92,7 +92,7 @@ export default function App() {
 
     {/* Subheading */}
     <p className="text-[0.875rem] sm:text-[1.rem] md:text-[1rem] lg:text-[1.2rem] xl:text-[1.2rem] font-poppins
-      pt-4 sm:pt-16 text-black mx-auto text-center max-w-[90%] sm:max-w-[80%]">
+      pt-10 sm:pt-20 text-black mx-auto text-center max-w-[90%] sm:max-w-[80%]">
       Get Notified when we Launch
     </p>
 
