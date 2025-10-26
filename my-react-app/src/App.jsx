@@ -77,14 +77,14 @@ export default function App() {
       className="font-poppins font-bold 
         bg-[linear-gradient(90deg,#148CFF_0%,#148CFF_20%,#005BBB_60%)] 
         bg-clip-text text-transparent leading-tight text-center 
-        text-[1.85rem] sm:text-[2rem] md:text-[3rem] lg:text-[3.5rem] 
+        text-[1.85rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] 
         xl:text-[3.5rem] transition-all duration-300"
     >
       The Future of Shopping in India is Almost Here Fast, Smart, and Effortless
     </h2>
 
     {/* Subheading */}
-    <p className="text-[0.875rem] sm:text-[1.25rem] md:text-[1.5rem] lg:text-[1.6rem] xl:text-[1.2rem] font-poppins
+    <p className="text-[0.875rem] sm:text-[1.rem] md:text-[1rem] lg:text-[1.2rem] xl:text-[1.2rem] font-poppins
       pt-4 sm:pt-16 text-black mx-auto text-center max-w-[90%] sm:max-w-[80%]">
       Get Notified when we Launch
     </p>
@@ -118,7 +118,7 @@ export default function App() {
 
       {/* Other Components */}
       
-      <div  className="w-full mt-26 sm:mt-36 md:mt-30 lg:mt-10 xl:mt-22 relative bottom-0 
+      <div  className="w-full mt-26 sm:mt-36 md:mt-20 lg:mt-10 xl:mt-22 relative bottom-0 
       object-contain ">
         <ScrollingImage />
       </div>
