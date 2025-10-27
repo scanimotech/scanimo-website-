@@ -9,7 +9,7 @@ export default function AboutUs() {
         {/* Heading */}
         <div className="text-center mb-8">
           <div className="inline-block">
-            <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-semibold mx-auto mt-4">
+            <h2 className="text-center text-3xl sm:text-3xl md:text-4xl font-semibold mx-auto mt-4">
               About Us <div className="h-[4px] w-full rounded-full" style={{
                           background: "linear-gradient(to right,  #FF8F00 0%, #FF8F00 20% ,#148CFF 20%, #148CFF 100%)",
                                     }}
@@ -41,4 +41,5 @@ export default function AboutUs() {
     </div>
   );
 }
+
 
