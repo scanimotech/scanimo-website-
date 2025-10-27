@@ -3,7 +3,7 @@ import ScrollingImage from "./components/ScrollingImage";
 import logo from "./assets/logo.png";
 import OurTeam from "./components/OurTeam";
 import Vedio from "./components/Vedio.jsx";
-import ContactUs from "./components/Contact_us";
+import ContactUs from "./components/Contact_us.jsx";
 import JoinUs from "./components/AnimatedWorldMap";
 import Footer from "./components/Footer.jsx";
 import AboutUs from "./components/AboutUs.jsx";
@@ -68,8 +68,7 @@ export default function App() {
     </div>
   )}
 </header>
-
-   <main  className="flex flex-col bg-white justify-center flex-1 mt-32">
+<main  className="flex flex-col bg-white justify-center flex-1 mt-32">
   <div  className="max-w-8xl mx-auto px-4 sm:pt-20 sm:px-10 lg:px-20">
 
     {/* Heading */}
@@ -117,7 +116,7 @@ export default function App() {
 
       {/* Other Components */}
       
-      <div  className="w-full mt-26 sm:mt-36 md:mt-10 lg:mt-10 xl:mt-22 relative bottom-0 
+      <div  className="w-full mt-26 sm:mt-36 md:mt-30 lg:mt-10 xl:mt-16 relative bottom-0 
       object-contain ">
         <ScrollingImage />
       </div>
@@ -141,13 +140,13 @@ export default function App() {
       </div>
 
       
-      <div id="team" className="w-full mt-auto">
+      <div id="team" className="w-full mt-auto pt-20">
         <OurTeam />
       </div>
       
       
 
-    <section className="relative w-full">
+    <section className="relative w-full pt-10">
        < Vedio />
     </section>
     <div id="contact" className="w-full mt-auto  ">
