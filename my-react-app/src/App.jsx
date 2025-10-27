@@ -79,7 +79,7 @@ export default function App() {
         text-[1.85rem] sm:text-[2rem] md:text-[3rem] lg:text-[3.5rem] 
         xl:text-[4rem] transition-all duration-300"
     >
-      The Future of Shopping in India is Almost Here Fast-, Smart, and Effortless
+      The Future of Shopping in India is Almost Here Fast- , Smart, and Effortless
     </h2>
 
     {/* Subheading */}
