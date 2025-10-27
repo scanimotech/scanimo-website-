@@ -69,47 +69,40 @@ export default function App() {
   )}
 </header>
 
-    <main className="flex flex-col bg-white justify-center flex-1 mt-34">
-  <div className="max-w-8xl mx-auto px-4 sm:pt-20 sm:px-10 lg:px-20">
+   <main  className="flex flex-col bg-white justify-center flex-1 mt-32">
+  <div  className="max-w-8xl mx-auto px-4 sm:pt-20 sm:px-10 lg:px-20">
 
-    {/* Heading with Fixed Height Container */}
-    <div className="min-h-[7rem] sm:min-h-[6rem] md:min-h-[7rem] lg:min-h-[8rem] xl:min-h-[9rem] flex items-center justify-center">
-      <h2  
-        className="font-poppins font-bold 
-          bg-[linear-gradient(90deg,#148CFF_0%,#148CFF_20%,#005BBB_60%)] 
-          bg-clip-text text-transparent leading-tight text-center 
-          text-[1.85rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] 
-          xl:text-[3.5rem] transition-all duration-300"
-      >
-        <span className="sm:block">
-          The Future of Shopping in India is Almost Here
-        </span>{" "}
-        <span className="sm:block">
-          Fast, Smart, and Effortless
-        </span>
-      </h2>
-    </div>
+    {/* Heading */}
+    <h2  
+      className="font-poppins font-bold 
+        bg-[linear-gradient(90deg,#148CFF_0%,#148CFF_20%,#005BBB_60%)] 
+        bg-clip-text text-transparent leading-tight text-center 
+        text-[1.85rem] sm:text-[2rem] md:text-[3rem] lg:text-[3.5rem] 
+        xl:text-[4rem] transition-all duration-300"
+    >
+      The Future of Shopping in India is Almost Here Fast, Smart, and Effortless
+    </h2>
 
     {/* Subheading */}
-    <p className="text-[0.875rem] sm:text-[1.rem] md:text-[1rem] lg:text-[1.2rem] xl:text-[1.2rem] font-poppins
-      pt-10 sm:pt-20 text-black mx-auto text-center max-w-[90%] sm:max-w-[80%]">
+    <p className="text-[0.875rem] sm:text-[1.25rem] md:text-[1.5rem] lg:text-[1.6rem] xl:text-[1.75rem] font-poppins
+      pt-4 sm:pt-6 text-black mx-auto text-center max-w-[90%] sm:max-w-[80%]">
       Get Notified when we Launch
     </p>
 
     {/* Input + Button */}
-    <div className="pt-4 sm:py-4 flex flex-col sm:flex-row items-center justify-center gap-3 px-2 sm:px-4">
+    <div  className="pt-3 sm:py-4 flex flex-col sm:flex-row items-center justify-center gap-3 px-2 sm:px-4">
       <input
         type="text"
         placeholder="Enter your email..."
-        className="w-[80%] max-w-[300px] sm:max-w-[360px] md:max-w-[420px] h-9 sm:h-10 md:h-9
+        className="w-[80%] max-w-[300px] sm:max-w-[360px] md:max-w-[420px] h-9 sm:h-10 md:h-11 
         px-2 text-sm sm:text-base border border-gray-300 rounded-md 
         focus:outline-none transition-all duration-300"
       />
 
       <button
-        className="h-9 sm:h-10 md:h-9 w-[60%] sm:w-[120px] md:w-[120px] 
+        className="h-9 sm:h-10 md:h-11 w-[60%] sm:w-[120px] md:w-[140px] 
         text-sm sm:text-base rounded-md flex items-center justify-center 
-        font-normal text-white border border-blue-600 bg-blue-600 
+        font-medium text-white border border-blue-600 bg-blue-600 
         hover:bg-white hover:text-orange-500 hover:border-orange-500 
         hover:shadow-xl transition-all duration-300"
       >
