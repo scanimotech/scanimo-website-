@@ -59,7 +59,7 @@ const ScrollAnimatedVideo = () => {
 
   return (
     <section
-      className="w-full flex flex-col items-center justify-center py-10 sm:py-16 md:py-20 transition-all duration-700 ease-in-out"
+      className="w-full flex flex-col items-center justify-center   transition-all duration-700 ease-in-out"
       style={{
         backgroundColor: !hasPlayed ? "white" : "transparent",
       }}
