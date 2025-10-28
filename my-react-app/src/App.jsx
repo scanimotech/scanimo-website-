@@ -10,6 +10,7 @@ import OurStory from "./components/OurStory.jsx";
 import PageBreak from "./components/PageBreak.jsx";
 import WhatDefinesUs from "./components/WhatDefineUs.jsx";
 import OurVision from "./components/Our_Vision.jsx";
+import Head2 from "./components/Heading_2.jsx";
 import { Menu, X } from "lucide-react"; // for hamburger icons
 
 export default function App() {
