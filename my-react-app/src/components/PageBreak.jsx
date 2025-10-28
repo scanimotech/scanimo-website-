@@ -5,7 +5,7 @@ export default function PageBreak() {
     return(
         <>
         {/* Desktop/Tablet View */}
-        <div className="hidden lg:block w-full mx-auto my-2">
+        <div className="hidden lg:block w-full mx-auto mt-2">
             <img src={PB} className="w-full h-auto" alt="Page Break"/>
         </div>
 
