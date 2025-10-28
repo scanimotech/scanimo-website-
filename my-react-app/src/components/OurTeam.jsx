@@ -159,10 +159,7 @@ export default function OurTeam() {
                  turning innovative ideas into meaningful real-world solutions.
                   From brainstorming sessions filled with wild concepts to late-night,
                    coffee-fueled coding marathons, we thrive on collaboration,
-                    creativity, and curiosity. Every project we take on is a chance
-                     to learn, grow, and push the boundaries of what technology can
-                      achieve. Together, we build not just products, but experiences
-                     that make a difference.
+                    creativity, and curiosity.
               </p>
             </div>
             
