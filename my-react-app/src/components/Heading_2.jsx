@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Heading_2.css";
 
 export default function Heading() {
   const [email, setEmail] = useState("");
@@ -74,3 +75,4 @@ export default function Heading() {
   );
 
 }
+
