@@ -15,7 +15,7 @@
   --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1536px;
 
-  
+
   
   /* Heading ka text */
   --text-phone: 2.95rem;   /* 10px */
@@ -51,4 +51,41 @@
     border-color: var(--color-gray-200, currentcolor);
   }
 }
+
+/* Prevents mobile browsers from zooming text inputs */
+html, body {
+  font-size: 16px !important;
+  -webkit-text-size-adjust: none !important;
+  text-size-adjust: none !important;
+}
+
+
+
+/* Prevent Safari from zooming input fields smaller than 16px */
+input,
+select,
+textarea,
+button {
+  font-size: 16px;
+}
+
+/* Ensure consistent box sizing */
+* {
+  box-sizing: border-box;
+}
+
+@layer base {
+  html, body {
+    -webkit-text-size-adjust: 100%; /* Prevent iOS font auto-enlarge */
+    text-size-adjust: 100%;
+    font-family: var(--font-poppins);
+  }
+
+  input, textarea, select, button {
+    font-family: inherit;
+    font-size: 1rem; /* Ensures consistent inputs */
+    line-height: 1.5;
+  }
+}
+
 
