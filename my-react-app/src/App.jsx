@@ -4,7 +4,6 @@ import logo from "./assets/logo.png";
 import OurTeam from "./components/OurTeam";
 import Vedio from "./components/Vedio.jsx";
 import ContactUs from "./components/Contact_us.jsx";
-import JoinUs from "./components/AnimatedWorldMap";
 import Footer from "./components/Footer.jsx";
 import AboutUs from "./components/AboutUs.jsx";
 import OurStory from "./components/OurStory.jsx";
@@ -132,15 +131,11 @@ export default function App() {
         <OurStory />
       </div>
       
-      <div className="w-full mt-auto pt-20">
+      <div className="w-full mt-auto pt-10">
         <PageBreak />
       </div>
-      <div className="w-full mt-auto pt-20">
-        <JoinUs />
-      </div>
-
       
-      <div id="team" className="w-full mt-auto pt-20">
+      <div id="team" className="w-full mt-auto pt-10">
         <OurTeam />
       </div>
       
