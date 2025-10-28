@@ -124,11 +124,13 @@ export default function App() {
       <div id="about" className="w-full mt-0 sm:mt-2 ">
         <AboutUs />
       </div>
-      <div className="w-full mt-auto sm:mt-10">
-        <WhatDefinesUs />
-      </div>
+
       <div className="w-full mt-auto pt-10">
         <OurStory />
+      </div>
+
+      <div className="w-full mt-auto sm:mt-10">
+        <WhatDefinesUs />
       </div>
       
       <div className="w-full mt-auto pt-10">
@@ -141,7 +143,7 @@ export default function App() {
       
       
 
-    <section className="relative w-full pt-10">
+    <section className="relative w-full pt-20">
        < Vedio />
     </section>
     <div id="contact" className="w-full mt-auto  ">
