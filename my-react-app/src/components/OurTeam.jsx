@@ -68,7 +68,7 @@ export default function OurTeam() {
   ];
 
   return (
-    <div className="h-auto min-h-screen px-4 md:px-8 lg:px-16 xl:px-24 bg-white">
+    <div className="h-auto px-4 md:px-8 lg:px-16 xl:px-24 bg-white">
       {expanded !== null ? (
         <div className="flex flex-col justify-start lg:justify-end h-auto lg:h-screen w-full max-w-[1600px] mx-auto">
           <div className="flex justify-center mb-2">
@@ -132,7 +132,7 @@ export default function OurTeam() {
           </motion.div>
         </div>
       ) : (
-        <div className="min-h-screen flex justify-center p-4 md:p-8">
+        <div className=" flex justify-center p-4 md:p-8">
           <div className="max-w-[1400px] w-full mx-auto">
             <div className="w-full flex flex-col mb-14 gap-14">
               <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-semibold mx-auto mt-4">
