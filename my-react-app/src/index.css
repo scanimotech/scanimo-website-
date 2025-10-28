@@ -6,14 +6,7 @@
   --font-roboto: Roboto, sans-serif;
   --font-poppins: Poppins, sans-serif;
 
-  /* ===== Breakpoints ===== */
-  --breakpoint-xs: 360px;  /* small phones */
-  --breakpoint-ip:390px;
-  --breakpoint-sm: 410px;  /* custom small breakpoint */
-  --breakpoint-md: 765px;
-  --breakpoint-lg: 1024px;
-  --breakpoint-xl: 1280px;
-  --breakpoint-2xl: 1536px;
+ 
 
 
   
