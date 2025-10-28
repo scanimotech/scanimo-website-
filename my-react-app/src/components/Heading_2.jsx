@@ -13,7 +13,7 @@ export default function Heading() {
   };
 
   return (
-    <main className="flex flex-col bg-white justify-center flex-1 mt-32 overflow-x-hidden md:pt-10 lg:pt-0">
+    <main className=" heading-text flex flex-col bg-white justify-center flex-1 mt-32 overflow-x-hidden md:pt-10 lg:pt-0">
       {/* Match the navbar container width */}
       <div className="w-full max-w-[400px] xs:max-w-[460px] sm:max-w-[800px] md:max-w-[1020px] lg:max-w-[1500px] text-center">
         <div className="w-full max-w-[400px] xs:max-w-[460px] sm:max-w-[800px] md:max-w-[1020px] lg:max-w-[1500px] text-center ip:pb-14 sm:pb-0">
@@ -72,4 +72,5 @@ export default function Heading() {
       </div>
     </main>
   );
+
 }
