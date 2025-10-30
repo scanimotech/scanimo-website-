@@ -12,8 +12,9 @@ const app = express();
 // CORS configuration - Update with your Firebase frontend URLs
 app.use(cors({
   origin: [
-    'https://scanimo-website-git-3079-3168c.web.app',
-    'https://scanimo-website-git-3079-3168c.firebaseapp.com',
+    'https://scanimo-website2git-7132-25e72.web.app/',
+    'https://scanimo-website2git-7132-25e72.firebaseapp.com/',
+    'https://scanimo.in/',
     'http://localhost:3000',
     'http://localhost:5000',
     'http://localhost:5173'
