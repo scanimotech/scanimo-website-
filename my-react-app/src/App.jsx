@@ -71,13 +71,11 @@ export default function App() {
 
 
       {/* Other Components */}
-      <div>
+      <div className=" min-h-screen flex flex-col">
         <Head2 />
-      </div>
-      
-      <div  className="w-full mt-26 sm:mt-36 md:mt-30 lg:mt-10 xl:mt-16 relative bottom-0 
-      object-contain ">
+      <div  className=" w-full object-contain absolute bottom-0 left-0 ">
         <ScrollingImage />
+      </div> 
       </div>
       
 
