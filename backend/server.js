@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
 import Message from "./models/message.js";
-import Subscriber from "./models/subscriber.js"; // 👈 new
+import Subscriber from "./models/subscriber.js"; // 👈 NEW
 
 // Load environment variables
 dotenv.config();
@@ -52,7 +52,7 @@ app.get("/", (req, res) => {
       home: "GET /",
       health: "GET /health",
       submitForm: "POST /submit-form",
-      notify: "POST /api/notify", // 👈 new
+      notify: "POST /api/notify",
     },
   });
 });
@@ -66,7 +66,7 @@ app.get("/health", (req, res) => {
   });
 });
 
-// ✅ NEW: “Get Notified” endpoint (only email)
+// ✅ NEW: “Get Notified” endpoint (email-only)
 app.post("/api/notify", async (req, res) => {
   try {
     const { email, source } = req.body;
@@ -85,7 +85,7 @@ app.post("/api/notify", async (req, res) => {
       });
     }
 
-    // Avoid duplicate subscribers
+    // Check if already subscribed
     const existing = await Subscriber.findOne({ email });
     if (existing) {
       return res.status(200).json({
@@ -118,7 +118,7 @@ app.post("/api/notify", async (req, res) => {
   }
 });
 
-// Submit form endpoint (contact form)
+// Contact form endpoint
 app.post("/submit-form", async (req, res) => {
   try {
     const { firstName, lastName, email, message } = req.body;
@@ -127,7 +127,8 @@ app.post("/submit-form", async (req, res) => {
     if (!firstName || !email || !message) {
       return res.status(400).json({
         success: false,
-        message: "Please fill all required fields (firstName, email, message).",
+        message:
+          "Please fill all required fields (firstName, email, message).",
       });
     }
 
@@ -186,3 +187,4 @@ app.listen(PORT, "0.0.0.0", () => {
   console.log(`📱 Local access: http://localhost:${PORT}`);
   console.log(`🌍 Environment: ${process.env.NODE_ENV || "development"}`);
 });
+
