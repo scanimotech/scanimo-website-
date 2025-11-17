@@ -12,7 +12,7 @@ const subscriberSchema = new mongoose.Schema(
     },
     source: {
       type: String,
-      default: "landing-page", // e.g. "hero-get-notified"
+      default: "hero-get-notified", // where the email came from
     },
   },
   {
@@ -23,3 +23,4 @@ const subscriberSchema = new mongoose.Schema(
 const Subscriber = mongoose.model("Subscriber", subscriberSchema);
 
 export default Subscriber;
+
